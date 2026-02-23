@@ -1,0 +1,49 @@
+## Overview
+Your goal is to bootstrap a runnable, production-grade utility application based on a provided Business Requirement Document (BRD). You must establish a modern tech stack, implement core business logic with high mathematical precision, and deliver a polished, responsive UI.
+
+## Procedure
+Environment Setup:
+
+Initialize a clean workspace using the technology stack specified in the BRD (Default: React LTS + Tailwind CSS).
+
+Verify the build pipeline and ensure a "Hello World" renders correctly.
+
+Schema & Type Definition:
+
+Analyze the BRD and define TypeScript interfaces/models for all core data entities.
+
+Establish a constants.ts file for all business-logic coefficients (rates, percentages, limits).
+
+Core Logic Implementation:
+
+Create a dedicated, headless logic engine (e.g., calculatePremium.ts or validatePolicy.ts).
+
+Constraint: Logic must be decoupled from the UI to allow for pure unit testing.
+
+UI/UX Componentization:
+
+Build a modular UI based on the functional requirements.
+
+Prioritize Real-time State Updates: User inputs should trigger logic recalculations immediately without page refreshes.
+
+Data Mocking:
+
+If the BRD requires external data, implement fixture-driven mocks or a local JSON-server. Do not leave the app in a broken state waiting for an API.
+
+Quality Assurance:
+
+Unit Tests: Write tests for all edge cases defined in the logic rules (e.g., boundary values, null inputs).
+
+E2E Tests: Implement a basic flow test (e.g., "Changing Input X updates Result Y").
+
+## Advice & Pointers
+Modular Design: Keep components small and reusable.
+
+Defensive Coding: Always validate inputs (age, currency, dates) before passing them to the logic engine.
+
+Styling: Use consistent spacing and accessibility standards (ARIA labels).
+
+## Forbidden Actions
+No Hardcoding: Do not hardcode business rules inside UI components.
+
+No "Golden Path" Only: Do not submit code without handling at least three common error states (empty fields, invalid characters, out-of-range values).
